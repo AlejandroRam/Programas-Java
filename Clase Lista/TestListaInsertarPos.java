@@ -28,13 +28,17 @@ public class TestListaInsertarPos {
 	public void testIngresoPosBien()throws Exception {
 		
 		
-		
-		boolean insertar = lista.insertar(mujer,1);
-		 insertar = lista.insertar(mujer,3);
+		lista.insertar(hombre);
+		lista.insertar(hombre);
+		lista.insertar(hombre,1);
+		lista.insertar(hombre,2);
+		boolean insertar = lista.insertar(mujer,5);
+
 		boolean esperado = true;
 		
 		assertEquals(esperado, insertar);
 		
 	}
+
 
 }

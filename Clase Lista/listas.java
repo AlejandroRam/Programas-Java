@@ -36,23 +36,32 @@ public class listas {
 		return exito;
 	}
 
+	/*Metodo insertar posicion, introducimos un objeto y una posicion valida dentro del array, puede estar vacia o no la 
+	 * posicion*/
 	public boolean insertar(Object objeto, int n) throws Exception {
 		boolean exito = false;
 		n = n-1;
-		if (n > elementos_reales) {
+		if (n > elementos_reales|| n<0) {
 			throw new Exception("posicion no disponible");
 		
-		} else {
+		}else if(elementos_reales == (contenedor.length)) 
+		{
+			throw new Exception("Array lleno");
+		}
+		else {
 			
-			if(contenedor[n]!= null)
+			Object aux = contenedor[n];
+			Object aux2;
+			contenedor[n] = objeto;
+			for(int i = n+1;i<elementos_reales;i++)
 			{
-				contenedor[n] = objeto;
-				exito = true;
-			}else {
-			contenedor[elementos_reales] = objeto;
+				aux2 = contenedor[i];
+				contenedor[i]=aux;
+				aux = aux2;
+			}
+			
 			elementos_reales++;
 			exito = true;
-			}
 		}
 
 		return exito;

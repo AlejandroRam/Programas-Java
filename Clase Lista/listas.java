@@ -101,10 +101,41 @@ public class listas {
 		return contenedor[elementos_reales];
 	}
 
-	/*
-	 * public Object devolver(int n)throws Exception {
-	 * 
-	 * }
-	 */
+
+		public Object devolver() throws Exception {
+		
+		Object aux;
+		if(elementos_reales == 0)
+		{
+			throw new Exception("Lista vacia");
+		}else {
+			aux= contenedor[elementos_reales-1];
+		}
+		
+		return aux;
+	}
+
+	
+	public Object devolverPos(int pos) throws Exception
+	{
+		
+		Object aux;
+		
+		if(pos<=0)
+		{
+			throw new Exception("Posicion no disponible");
+		}else if(pos>elementos_reales)
+		{
+			throw new Exception("Posicion no disponible");
+		}else {
+			aux= contenedor[pos-1];
+		}
+		
+		return aux;
+		
+		
+	}
+	
+	
 
 }

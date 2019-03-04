@@ -97,12 +97,12 @@ public class listas <T> {
 		return exito;
 	}
 
-	public Object devolver() {
+	public T devolver() {
 		return contenedor[elementos_reales];
 	}
 
 
-		public Object devolver() throws Exception {
+		public T devolver() throws Exception {
 		
 		Object aux;
 		if(elementos_reales == 0)
@@ -116,7 +116,7 @@ public class listas <T> {
 	}
 
 	
-	public Object devolverPos(int pos) throws Exception
+	public T devolverPos(int pos) throws Exception
 	{
 		
 		Object aux;

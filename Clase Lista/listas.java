@@ -1,12 +1,12 @@
 package listas;
 
-public class listas {
+public class listas <T> {
 
 	/*
 	 * Elementos de la clase lista Primero un array de objetos Segundo tamaño del
 	 * array tercero numero real de elementos deel array
 	 */
-	protected Object[] contenedor;
+	protected T[] contenedor;
 	protected int num_elementos;
 	protected int elementos_reales = 0;
 	protected int elemento_fin ;
@@ -17,12 +17,12 @@ public class listas {
 
 	/* Constructor paramatetro tamaño */
 	public listas(int tam) {
-		contenedor = new Object[tam];
+		contenedor = (T[])new Object[tam];
 		this.num_elementos = tam;
 		elemento_fin = tam-1;
 	}
 
-	public boolean insertar(Object objeto) throws Exception {
+	public boolean insertar(T objeto) throws Exception {
 		boolean exito = false;
 
 		 if (contenedor.length  == (elementos_reales)) {
@@ -38,7 +38,7 @@ public class listas {
 
 	/*Metodo insertar posicion, introducimos un objeto y una posicion valida dentro del array, puede estar vacia o no la 
 	 * posicion*/
-	public boolean insertar(Object objeto, int n) throws Exception {
+	public boolean insertar(T objeto, int n) throws Exception {
 		boolean exito = false;
 		n = n-1;
 		if (n > elementos_reales|| n<0) {
@@ -67,7 +67,7 @@ public class listas {
 		return exito;
 	}
 
-	public boolean eliminar(Object o) throws Exception {
+	public boolean eliminar(T o) throws Exception {
 		boolean exito = false;
 
 		if (elementos_reales == 0) {
@@ -79,7 +79,7 @@ public class listas {
 		return exito;
 	}
 
-	public boolean eliminar(Object o, int n) throws Exception {
+	public boolean eliminar(T o, int n) throws Exception {
 		boolean exito = false;
 		if (n > elementos_reales) {
 			throw new Exception("no se puede borrar elemento inexistente");

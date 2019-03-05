@@ -50,8 +50,8 @@ public class listas <T> {
 		}
 		else {
 			
-			Object aux = contenedor[n];
-			Object aux2;
+			T aux = contenedor[n];
+			T aux2;
 			contenedor[n] = objeto;
 			for(int i = n+1;i<elementos_reales;i++)
 			{
@@ -97,14 +97,10 @@ public class listas <T> {
 		return exito;
 	}
 
-	public T devolver() {
-		return contenedor[elementos_reales];
-	}
-
 
 		public T devolver() throws Exception {
 		
-		Object aux;
+		T aux;
 		if(elementos_reales == 0)
 		{
 			throw new Exception("Lista vacia");
@@ -119,7 +115,7 @@ public class listas <T> {
 	public T devolverPos(int pos) throws Exception
 	{
 		
-		Object aux;
+		T aux;
 		
 		if(pos<=0)
 		{

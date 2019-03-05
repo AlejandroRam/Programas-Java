@@ -1,4 +1,4 @@
-package listas;
+package Ejercicio3;
 
 public class listas <T> {
 
@@ -38,7 +38,7 @@ public class listas <T> {
 
 	/*Metodo insertar posicion, introducimos un objeto y una posicion valida dentro del array, puede estar vacia o no la 
 	 * posicion*/
-	public boolean insertar(T objeto, int n) throws Exception {
+	public boolean insertarPos(T objeto, int n) throws Exception {
 		boolean exito = false;
 		n = n-1;
 		if (n > elementos_reales|| n<0) {
@@ -67,7 +67,7 @@ public class listas <T> {
 		return exito;
 	}
 
-	public boolean eliminar(T o) throws Exception {
+	public boolean eliminar() throws Exception {
 		boolean exito = false;
 
 		if (elementos_reales == 0) {
@@ -79,7 +79,7 @@ public class listas <T> {
 		return exito;
 	}
 
-	public boolean eliminar(T o, int n) throws Exception {
+	public boolean eliminar(int n) throws Exception {
 		boolean exito = false;
 		if (n > elementos_reales) {
 			throw new Exception("no se puede borrar elemento inexistente");
@@ -132,6 +132,4 @@ public class listas <T> {
 		
 	}
 	
-	
-
 }

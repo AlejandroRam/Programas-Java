@@ -6,10 +6,10 @@ public class listas <T> {
 	 * Elementos de la clase lista Primero un array de objetos Segundo tamaño del
 	 * array tercero numero real de elementos deel array
 	 */
-	protected T[] contenedor;
-	protected int num_elementos;
-	protected int elementos_reales = 0;
-	protected int elemento_fin ;
+	private T[] contenedor;
+	private int num_elementos;
+	private int elementos_reales = 0;
+	private int elemento_fin ;
 	/* Constructor vacío */
 	public listas() {
 
@@ -87,11 +87,11 @@ public class listas <T> {
 			throw new Exception("Fallo");
 		} else {
 
-			for (int i = n; n < elementos_reales; n++) {
+			for (int i = n; i < elementos_reales; i++) {
 
-				contenedor[n] = contenedor[n + 1];
+				contenedor[i] = contenedor[i + 1];
 			}
-
+			elementos_reales--;
 		}
 
 		return exito;

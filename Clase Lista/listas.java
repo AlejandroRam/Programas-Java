@@ -1,5 +1,3 @@
-package Ejercicio3;
-
 public class listas <T> {
 
 	/*
@@ -117,19 +115,27 @@ public class listas <T> {
 		
 		T aux;
 		
-		if(pos<=0)
+		if(pos<0)
 		{
 			throw new Exception("Posicion no disponible");
 		}else if(pos>elementos_reales)
 		{
 			throw new Exception("Posicion no disponible");
 		}else {
-			aux= contenedor[pos-1];
+			aux= contenedor[pos];
 		}
 		
 		return aux;
-		
-		
+	}
+
+	public int length()
+	{
+		return num_elementos;
+	}
+	
+	public int length_real()
+	{
+		return elementos_reales;
 	}
 	
 }

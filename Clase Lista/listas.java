@@ -138,4 +138,18 @@ public class listas <T> {
 		return elementos_reales;
 	}
 	
+	
+	public int posicion(T objeto)
+	{
+		int pos=-1;
+		for(int i = 0;i<elementos_reales;i++)
+		{
+			if(contenedor[i].equals(objeto))
+			{
+				pos = i;
+			}
+		}
+		return pos;
+	}
+	
 }
